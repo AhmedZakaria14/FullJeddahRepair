@@ -6,6 +6,9 @@ import { AnimateIn } from '@/components/AnimateIn';
 export const metadata: Metadata = {
   title: 'كشف تسربات المياه بجدة بدون تكسير | أفضل الأجهزة الإلكترونية',
   description: 'نوفر خدمة كشف تسربات المياه بجدة بدون تكسير للحمامات، المسابح والأسطح. نستخدم أجهزة إلكترونية لكشف الخلل الدقيق وتوفير فاتورة المياه المرتفعة. اتصل: 0546142922',
+  alternates: {
+    canonical: '/services/leak-detection',
+  },
 };
 
 export default function LeakDetectionServicePage() {

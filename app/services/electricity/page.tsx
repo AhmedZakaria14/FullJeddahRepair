@@ -8,6 +8,9 @@ import { articles } from '@/lib/electricity-articles';
 export const metadata: Metadata = {
   title: 'أفضل مقاول وصيانة كهرباء بجدة | فني كهربائي منازل',
   description: 'خدمات صيانة وتأسيس الكهرباء بجدة. نقدم أمهر فني كهربائي منازل لإصلاح الأعطال، تمديد الكابلات، وتركيب الإضاءة بأسعار تنافسية. اتصل الآن 0546142922',
+  alternates: {
+    canonical: '/services/electricity',
+  },
 };
 
 export default function ElectricityServicePage() {

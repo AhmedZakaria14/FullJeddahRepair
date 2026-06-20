@@ -7,6 +7,9 @@ import { AnimateIn } from '@/components/AnimateIn';
 export const metadata: Metadata = {
   title: 'مدونة نصائح الصيانة المنزلية | صيانة جدة',
   description: 'مقالات ونصائح هامة حول كيفية الحفاظ على سباكة وكهرباء منزلك بجدة، وطرق الوقاية من تسربات المياه واختيار أفضل أنواع البلاط.',
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 const blogPosts = [

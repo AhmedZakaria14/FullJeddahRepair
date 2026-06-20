@@ -1,8 +1,17 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShieldCheck, Clock, CheckCircle2, ChevronLeft } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
 import { FAQSection } from '@/components/FAQSection';
+
+export const metadata: Metadata = {
+  title: 'صيانة جدة - أفضل مقاول كهرباء وسباكة وكشف تسربات',
+  description: 'أفضل مقاول للصيانة المنزلية في جدة. خدمات سباكة، كهرباء، كشف تسربات المياه بدون تكسير، وتركيب السيراميك والرخام.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const services = [
   {

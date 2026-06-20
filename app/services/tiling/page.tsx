@@ -6,6 +6,9 @@ import { AnimateIn } from '@/components/AnimateIn';
 export const metadata: Metadata = {
   title: 'معلم بلاط بجدة | تركيب سيراميك ورخام وبورسلان',
   description: 'أفضل معلم بلاط بجدة لتركيب السيراميك، البورسلان، الرخام، والجرانيت. دقة في الوزنية، إنجاز سريع، وأسعار منافسة لتركيب أحواش ومنازل وفلل. اتصل: 0546142922',
+  alternates: {
+    canonical: '/services/tiling',
+  },
 };
 
 export default function TilingServicePage() {

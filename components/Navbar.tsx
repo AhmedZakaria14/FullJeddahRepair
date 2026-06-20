@@ -8,7 +8,13 @@ import { AnimatePresence, motion } from 'motion/react';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    // Avoid batching with Next.js Link navigation transition
+    // to ensure the menu closes immediately and loading.tsx is visible
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 0);
+  };
 
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">

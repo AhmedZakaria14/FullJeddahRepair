@@ -6,6 +6,9 @@ import { AnimateIn } from '@/components/AnimateIn';
 export const metadata: Metadata = {
   title: 'أفضل سباك بجدة | صيانة سباكة ومجاري وصرف صحي',
   description: 'هل تبحث عن أفضل سباك بجدة؟ نقدم لك خدمات السباكة المنزلية، تسليك المجاري، صيانة المواسير، وتركيب أطقم الحمامات والمطابخ بأعلى جودة. تواصل مع سباك جدة: 0546142922',
+  alternates: {
+    canonical: '/services/plumbing',
+  },
 };
 
 export default function PlumbingServicePage() {

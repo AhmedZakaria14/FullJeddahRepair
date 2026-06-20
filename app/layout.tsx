@@ -8,6 +8,7 @@ import { FloatingContact } from '@/components/FloatingContact';
 const cairo = Cairo({ subsets: ['arabic'], weight: ['400', '600', '700', '800'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jeddah-maintenance.sa'),
   title: {
     default: 'صيانة جدة - أفضل مقاول كهرباء وسباكة وكشف تسربات',
     template: '%s | صيانة جدة المتكاملة'
@@ -16,6 +17,17 @@ export const metadata: Metadata = {
   keywords: ['صيانة منازل جدة', 'سباك جدة', 'أفضل سباك بجدة', 'صيانة كهرباء بجدة', 'كشف تسربات المياه بجدة بدون تكسير', 'معلم بلاط بجدة', 'رقم سباك بجدة', 'فني كهربائي منازل بجدة'],
   authors: [{name: 'صيانة جدة المتكاملة'}],
   creator: 'صيانة جدة المتكاملة',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
     apple: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
