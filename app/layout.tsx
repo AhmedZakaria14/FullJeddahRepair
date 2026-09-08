@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
-    apple: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
-    shortcut: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
+    icon: '/favicon.png',
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.png',
   },
   openGraph: {
     type: 'website',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'لجميع أعمال الكهرباء، السباكة، كشف التسربات وتركيب البلاط في جدة',
     siteName: 'صيانة جدة المتكاملة',
     images: [{
-      url: 'https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png',
+      url: '/logo.png',
       width: 500,
       height: 500,
       alt: 'صيانة جدة المتكاملة',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'صيانة ومقاولات جدة المتكاملة',
     description: 'أفضل مقاول للصيانة المنزلية في جدة. خدمات سباكة، كهرباء، كشف تسربات المياه بدون تكسير، وتركيب السيراميك.',
-    images: ['https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png'],
+    images: ['/logo.png'],
   }
 };
 
@@ -62,7 +62,7 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       "name": "صيانة جدة المتكاملة",
-      "image": "https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png",
+      "image": "https://jeddah-maintenance.sa/logo.png",
       "@id": "https://jeddah-maintenance.sa",
       "url": "https://jeddah-maintenance.sa",
       "telephone": "0546142922",

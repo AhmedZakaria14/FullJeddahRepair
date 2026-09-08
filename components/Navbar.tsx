@@ -23,7 +23,7 @@ export function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-3">
               <Image 
-                src="https://res.cloudinary.com/dxvjqrb9l/image/upload/v1781928647/%D8%B5%D9%8A%D8%A7%D8%AA%D8%A9_%D8%AC%D8%AF%D8%A9_lavi0o.png" 
+                src="/logo.png" 
                 alt="صيانة جدة المتكاملة"
                 width={50}
                 height={50}
