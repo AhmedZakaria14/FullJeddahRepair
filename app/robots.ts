@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/',
+      disallow: ['/api/', '/admin/', '/dashboard/'],
     },
-    sitemap: 'https://jeddah-maintenance.sa/sitemap.xml',
+    sitemap: 'https://www.jeddahfullrepair.com/sitemap.xml',
   };
 }
