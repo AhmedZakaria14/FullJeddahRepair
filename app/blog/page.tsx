@@ -18,28 +18,28 @@ const blogPosts = [
     excerpt: 'تجاهل علامات تسرب المياه قد يؤدي لخسائر مبكرة في بنية المنزل وارتفاع الفواتير. تعرف على أبرز العلامات التي تتطلب تدخل فني فوري بجدة.',
     category: 'كشف تسربات',
     image: '/images/leak.jpg',
-    link: '#' // Mock link
+    link: '/blog/hidden-water-leak-signs-jeddah'
   },
   {
     title: 'كيف تختار مقاس ولون البورسلان المناسب لمجلسك',
     excerpt: 'نصائح من معلم بلاط بجدة حول كيفية اختيار الأرضية الأنسب بناءً على مساحة الغرفة واللون السائد لإعطاء شعور بالاتساع والرفاهية.',
     category: 'تبليط وسيراميك',
     image: '/images/tiling.jpg',
-    link: '#' // Mock link
+    link: '/blog/choose-porcelain-size-color-jeddah'
   },
   {
     title: 'أضرار إهمال صيانة طبلون الكهرباء وخطورته',
     excerpt: 'طبلون الكهرباء هو القلب النابض في للمنزل. نشرح لك لماذا يجب إجراء فحص دوري للقواطع للتأكد من عدم وجود التماسات مفاجئة.',
     category: 'صيانة كهرباء',
     image: '/images/home_electricity.jpg',
-    link: '#' // Mock link
+    link: '/blog/electrical-panel-maintenance-jeddah'
   },
   {
     title: 'الطرق الصحيحة لتسليك انسداد المجاري بمطبخك',
     excerpt: 'الدهون المتراكمة تؤدي لانسداد أنابيب المطبخ. اقرأ عن الطرق الطبيعية والاحترافية لتسليك البالوعة وكيف يساعدك السباك في حلها جذرياً.',
     category: 'سباكة ومجاري',
     image: '/images/plumbing.jpg',
-    link: '#' // Mock link
+    link: '/blog/kitchen-drain-unclogging-jeddah'
   }
 ];
 
@@ -58,32 +58,34 @@ export default function BlogPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {blogPosts.map((post, index) => (
-            <AnimateIn key={index} delay={index * 0.1}>
-              <article className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col sm:flex-row h-full group">
-                <div className="sm:w-2/5 relative h-64 sm:h-auto overflow-hidden">
-                  <Image 
-                    src={post.image} 
-                    alt={post.title} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute top-4 right-4 bg-amber-500 text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md z-10">
-                    {post.category}
+            <AnimateIn key={post.link} delay={index * 0.1}>
+              <Link href={post.link} className="block h-full">
+                <article className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col sm:flex-row h-full group cursor-pointer">
+                  <div className="sm:w-2/5 relative h-64 sm:h-auto overflow-hidden">
+                    <Image 
+                      src={post.image} 
+                      alt={post.title} 
+                      fill 
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-4 right-4 bg-amber-500 text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md z-10">
+                      {post.category}
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent sm:hidden"></div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 to-transparent sm:hidden"></div>
-                </div>
-                <div className="p-8 sm:w-3/5 flex flex-col justify-center flex-grow">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{post.title}</h2>
-                  <p className="text-gray-600 mb-8 flex-grow leading-relaxed">{post.excerpt}</p>
-                  <div className="mt-auto">
-                    <span className="inline-flex items-center text-blue-600 font-bold hover:text-amber-600 transition-colors cursor-pointer text-lg">
-                      <span className="ml-2">اقرأ المقال كاملاً</span>
-                      <ArrowLeft size={20} className="group-hover:-translate-x-2 transition-transform" />
-                    </span>
+                  <div className="p-8 sm:w-3/5 flex flex-col justify-center flex-grow">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{post.title}</h2>
+                    <p className="text-gray-600 mb-8 flex-grow leading-relaxed">{post.excerpt}</p>
+                    <div className="mt-auto">
+                      <span className="inline-flex items-center text-blue-600 font-bold group-hover:text-amber-600 transition-colors text-lg">
+                        <span className="ml-2">اقرأ المقال كاملاً</span>
+                        <ArrowLeft size={20} className="group-hover:-translate-x-2 transition-transform" />
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             </AnimateIn>
           ))}
         </div>
