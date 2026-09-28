@@ -170,7 +170,7 @@ function htmlFromText(text, group, currentSlug) {
 
   for (const line of lines) {
     const isH3 = /^\d+[\-.]\s+/.test(line);
-    const isH2 = !isH3 && line.length < 90 && !/[.؟:]$/.test(line);
+    const isH2 = !isH3 && line.length < 90 && !/[.:]$/.test(line);
 
     if (isH2 || isH3) {
       flushParagraph();
