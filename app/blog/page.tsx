@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { AnimateIn } from '@/components/AnimateIn';
+import { blogPosts } from '@/lib/blog-posts';
 
 export const metadata: Metadata = {
   title: 'مدونة نصائح الصيانة المنزلية | صيانة جدة',
@@ -11,37 +12,6 @@ export const metadata: Metadata = {
     canonical: '/blog',
   },
 };
-
-const blogPosts = [
-  {
-    title: '5 علامات تدل على وجود تسربات خفية في منزلك',
-    excerpt: 'تجاهل علامات تسرب المياه قد يؤدي لخسائر مبكرة في بنية المنزل وارتفاع الفواتير. تعرف على أبرز العلامات التي تتطلب تدخل فني فوري بجدة.',
-    category: 'كشف تسربات',
-    image: '/images/leak.jpg',
-    link: '/blog/hidden-water-leak-signs-jeddah'
-  },
-  {
-    title: 'كيف تختار مقاس ولون البورسلان المناسب لمجلسك',
-    excerpt: 'نصائح من معلم بلاط بجدة حول كيفية اختيار الأرضية الأنسب بناءً على مساحة الغرفة واللون السائد لإعطاء شعور بالاتساع والرفاهية.',
-    category: 'تبليط وسيراميك',
-    image: '/images/tiling.jpg',
-    link: '/blog/choose-porcelain-size-color-jeddah'
-  },
-  {
-    title: 'أضرار إهمال صيانة طبلون الكهرباء وخطورته',
-    excerpt: 'طبلون الكهرباء هو القلب النابض في للمنزل. نشرح لك لماذا يجب إجراء فحص دوري للقواطع للتأكد من عدم وجود التماسات مفاجئة.',
-    category: 'صيانة كهرباء',
-    image: '/images/home_electricity.jpg',
-    link: '/blog/electrical-panel-maintenance-jeddah'
-  },
-  {
-    title: 'الطرق الصحيحة لتسليك انسداد المجاري بمطبخك',
-    excerpt: 'الدهون المتراكمة تؤدي لانسداد أنابيب المطبخ. اقرأ عن الطرق الطبيعية والاحترافية لتسليك البالوعة وكيف يساعدك السباك في حلها جذرياً.',
-    category: 'سباكة ومجاري',
-    image: '/images/plumbing.jpg',
-    link: '/blog/kitchen-drain-unclogging-jeddah'
-  }
-];
 
 export default function BlogPage() {
   return (
@@ -58,8 +28,8 @@ export default function BlogPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {blogPosts.map((post, index) => (
-            <AnimateIn key={post.link} delay={index * 0.1}>
-              <Link href={post.link} className="block h-full">
+            <AnimateIn key={post.slug} delay={index * 0.1}>
+              <Link href={`/blog/${post.slug}`} className="block h-full">
                 <article className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col sm:flex-row h-full group cursor-pointer">
                   <div className="sm:w-2/5 relative h-64 sm:h-auto overflow-hidden">
                     <Image 
@@ -76,7 +46,7 @@ export default function BlogPage() {
                   </div>
                   <div className="p-8 sm:w-3/5 flex flex-col justify-center flex-grow">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{post.title}</h2>
-                    <p className="text-gray-600 mb-8 flex-grow leading-relaxed">{post.excerpt}</p>
+                    <p className="text-gray-600 mb-8 flex-grow leading-relaxed">{post.description}</p>
                     <div className="mt-auto">
                       <span className="inline-flex items-center text-blue-600 font-bold group-hover:text-amber-600 transition-colors text-lg">
                         <span className="ml-2">اقرأ المقال كاملاً</span>
